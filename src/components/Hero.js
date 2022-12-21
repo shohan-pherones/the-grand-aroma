@@ -3,15 +3,15 @@ import heroImg from "../assets/images/hero.jpg";
 
 const Hero = () => {
   return (
-    <div className="hero min-h-screen bg-base-200">
+    <div className="hero min-h-screen bg-base-200 text-center lg:text-left">
       <div className="hero-content flex-col lg:flex-row-reverse">
         <img
           src={heroImg}
-          className="max-w-md
+          className="max-w-xs lg:max-w-md
          rounded-tl-full rounded-tr-full"
         />
         <div>
-          <h1 className="text-7xl font-semibold leading-tight">
+          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-semibold leading-tight">
             Indulge in luxury spa treatments and revitalize your mind, body, and
             soul.
           </h1>
