@@ -1,6 +1,26 @@
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const links = (
+    <>
+      <li>
+        <Link to="/">Home</Link>
+      </li>
+      <li>
+        <Link to="/appointment">Appointment</Link>
+      </li>
+      <li>
+        <Link to="/reviews">Reviews</Link>
+      </li>
+      <li>
+        <Link to="/about">About</Link>
+      </li>
+      <li>
+        <Link to="/contact">Contact</Link>
+      </li>
+    </>
+  );
+
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
@@ -25,21 +45,7 @@ const Navbar = () => {
             tabIndex={0}
             className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
           >
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/appointment">Appointment</Link>
-            </li>
-            <li>
-              <Link to="/reviews">Reviews</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contact</Link>
-            </li>
+            {links}
           </ul>
         </div>
         <Link to="/" className="btn btn-ghost normal-case text-xl">
@@ -47,23 +53,7 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/appointment">Appointment</Link>
-          </li>
-          <li>
-            <Link to="/reviews">Reviews</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
-        </ul>
+        <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end">
         <Link to="/login" className="btn">
