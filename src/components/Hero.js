@@ -22,7 +22,7 @@ const Hero = () => {
             </q>{" "}
             - Helen Keller
           </p>
-          <Link to="/appointment" className="btn btn-primary">
+          <Link to="/appointment" className="btn btn-primary px-8">
             Start beautify yourself
           </Link>
         </div>
